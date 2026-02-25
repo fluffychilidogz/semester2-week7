@@ -1,3 +1,5 @@
+/* Program with a 'use after free' bug */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,7 +11,7 @@ int main(int argc, char* argv[])
 
     free(str);
 
-    printf("String is: %s\n", str);
+    printf("String is: %s\n", str);  // shouldn't use memory after freeing it!
 
     return 0;
 }

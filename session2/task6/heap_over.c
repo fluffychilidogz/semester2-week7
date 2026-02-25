@@ -1,4 +1,4 @@
-/* Program that allocates and frees heap memory correctly */
+/* Program with a heap-based buffer overrun */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,7 +6,7 @@
  
 int main(int argc, char* argv[])
 {
-    char* str = malloc(100);
+    char* str = malloc(10);
     strcpy(str, "Hello World!");
 
     printf("String is: %s\n", str);
