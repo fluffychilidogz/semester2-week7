@@ -28,8 +28,11 @@ int main(void)
       printf("Enter your password: ");
       gets(input);
     #else
-      char* tmp = getpass("Enter your password: ");
-      strcpy(input, tmp);
+      //char* tmp = getpass("Enter your password: ");
+      //strcpy(input, tmp);
+    char*tmp;
+    printf("Enter your password:");
+    fgets(input, 8, stdin);
     #endif
 
     /* Make sure strings are null-terminated */

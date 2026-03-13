@@ -3,7 +3,16 @@
 
 long factorial(int n)
 {
-    return n * factorial(n - 1);
+    long temp = n;
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    for (int i=1;i<n-1;i++)
+    {
+        temp = temp * (n-i);
+    }
+    return temp;
 }
 
 int main(int argc, char* argv[])
